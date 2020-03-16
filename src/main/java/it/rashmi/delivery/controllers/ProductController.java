@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @RestController
-@RequestMapping( "/" )
+@RequestMapping( "/product" )
 public class ProductController
 {
     @Autowired
@@ -20,7 +20,6 @@ public class ProductController
     @GetMapping()
     public List<TestModel> getName( HttpServletResponse response )
     {
-//        response.addHeader( "Access-Control-Allow-Origin", "*" );
         return testService.getAllTests();
     }
 }

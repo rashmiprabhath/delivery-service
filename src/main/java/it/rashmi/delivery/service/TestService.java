@@ -17,7 +17,7 @@ public class TestService
     public List<TestModel> getAllTests()
     {
         return this.testRepository.findAll().stream()
-                           .map( test -> new TestModel( test.getID(), test.getName() ) )
-                           .collect( Collectors.toList() );
+                                  .map( test -> new TestModel( test.getID(), test.getName() ) )
+                                  .collect( Collectors.toList() );
     }
 }
