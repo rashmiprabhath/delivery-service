@@ -52,12 +52,12 @@ public class Supplier
     }
 
 
-    public SupplierType getSupplierTypeId()
+    public SupplierType getSupplierType()
     {
         return supplierType;
     }
 
-    public void setSupplierTypeId( SupplierType supplierType )
+    public void setSupplierType( SupplierType supplierType )
     {
         this.supplierType = supplierType;
     }

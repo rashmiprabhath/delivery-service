@@ -56,12 +56,12 @@ public class Order
     }
 
 
-    public PaymentStatus getPaymentStatusId()
+    public PaymentStatus getPaymentStatus()
     {
         return paymentStatus;
     }
 
-    public void setPaymentStatusId( PaymentStatus paymentStatus )
+    public void setPaymentStatus( PaymentStatus paymentStatus )
     {
         this.paymentStatus = paymentStatus;
     }

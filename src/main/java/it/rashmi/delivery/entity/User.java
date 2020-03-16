@@ -91,12 +91,12 @@ public class User
     }
 
 
-    public UserLevel getUserLevelId()
+    public UserLevel getUserLevel()
     {
         return userLevel;
     }
 
-    public void setUserLevelId( UserLevel userLevel )
+    public void setUserLevel( UserLevel userLevel )
     {
         this.userLevel = userLevel;
     }

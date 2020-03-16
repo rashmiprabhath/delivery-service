@@ -1,9 +1,6 @@
 package it.rashmi.delivery.entity;
 
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table( name = "order_item" )
@@ -12,6 +9,8 @@ public class OrderItem
 
     @EmbeddedId
     private OrderItemId orderItemId;
+    @Column(name = "quantity")
+    private double quantity;
     @ManyToOne
     private Supplier supplier;
     @ManyToOne
@@ -27,23 +26,33 @@ public class OrderItem
         this.orderItemId = orderItemId;
     }
 
-    public Supplier getSupplierId()
+    public double getQuantity()
+    {
+        return quantity;
+    }
+
+    public void setQuantity( double quantity )
+    {
+        this.quantity = quantity;
+    }
+
+    public Supplier getSupplier()
     {
         return supplier;
     }
 
-    public void setSupplierId( Supplier supplier )
+    public void setSupplier( Supplier supplier )
     {
         this.supplier = supplier;
     }
 
 
-    public ItemStatus getItemStatusId()
+    public ItemStatus getItemStatus()
     {
         return itemStatus;
     }
 
-    public void setItemStatusId( ItemStatus itemStatus )
+    public void setItemStatus( ItemStatus itemStatus )
     {
         this.itemStatus = itemStatus;
     }

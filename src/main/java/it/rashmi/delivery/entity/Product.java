@@ -65,12 +65,12 @@ public class Product
     }
 
 
-    public ProductType getProductTypeId()
+    public ProductType getProductType()
     {
         return productType;
     }
 
-    public void setProductTypeId( ProductType productType )
+    public void setProductType( ProductType productType )
     {
         this.productType = productType;
     }
