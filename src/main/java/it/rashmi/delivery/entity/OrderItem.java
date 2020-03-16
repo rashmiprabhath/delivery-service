@@ -9,7 +9,7 @@ public class OrderItem
 
     @EmbeddedId
     private OrderItemId orderItemId;
-    @Column(name = "quantity")
+    @Column( name = "quantity" )
     private double quantity;
     @ManyToOne
     private Supplier supplier;

@@ -25,13 +25,15 @@ public class ConfigurationService
     @Autowired
     private UserLevelRepository userLevelRepository;
 
-    /** ------------ delivery status services ---------------- */
+    /**
+     * ------------ delivery status services ----------------
+     */
 
     public List<ConfigParamModel> getDeliveryStatuses()
     {
         return deliveryStatusRepository.findAll().stream()
-                                   .map( config -> new ConfigParamModel( config.getId(), config.getName() ) )
-                                   .collect( Collectors.toList() );
+                                       .map( config -> new ConfigParamModel( config.getId(), config.getName() ) )
+                                       .collect( Collectors.toList() );
     }
 
     public void saveDeliveryStatus( String name )
@@ -41,7 +43,9 @@ public class ConfigurationService
         this.deliveryStatusRepository.save( deliveryStatus );
     }
 
-    /** ------------ item status services ---------------- */
+    /**
+     * ------------ item status services ----------------
+     */
 
     public List<ConfigParamModel> getItemStatuses()
     {
@@ -57,13 +61,15 @@ public class ConfigurationService
         this.itemStatusRepository.save( itemStatus );
     }
 
-    /** ------------ payment status services ---------------- */
+    /**
+     * ------------ payment status services ----------------
+     */
 
     public List<ConfigParamModel> getPaymentStatuses()
     {
         return paymentStatusRepository.findAll().stream()
-                                   .map( config -> new ConfigParamModel( config.getId(), config.getName() ) )
-                                   .collect( Collectors.toList() );
+                                      .map( config -> new ConfigParamModel( config.getId(), config.getName() ) )
+                                      .collect( Collectors.toList() );
     }
 
     public void savePaymentStatus( String name )
@@ -73,7 +79,9 @@ public class ConfigurationService
         this.paymentStatusRepository.save( paymentStatus );
     }
 
-    /** ------------ product type services ---------------- */
+    /**
+     * ------------ product type services ----------------
+     */
 
     public List<ConfigParamModel> getProductTypes()
     {
@@ -89,13 +97,15 @@ public class ConfigurationService
         this.productTypeRepository.save( productType );
     }
 
-    /** ------------ supplier type services ---------------- */
+    /**
+     * ------------ supplier type services ----------------
+     */
 
     public List<ConfigParamModel> getSupplierTypes()
     {
         return supplierTypeRepository.findAll().stream()
-                                    .map( config -> new ConfigParamModel( config.getId(), config.getName() ) )
-                                    .collect( Collectors.toList() );
+                                     .map( config -> new ConfigParamModel( config.getId(), config.getName() ) )
+                                     .collect( Collectors.toList() );
     }
 
     public void saveSupplierType( String name )
@@ -105,13 +115,15 @@ public class ConfigurationService
         this.supplierTypeRepository.save( supplierType );
     }
 
-    /** ------------ user level services ---------------- */
+    /**
+     * ------------ user level services ----------------
+     */
 
     public List<ConfigParamModel> getUserLevels()
     {
         return userLevelRepository.findAll().stream()
-                                    .map( config -> new ConfigParamModel( config.getId(), config.getName() ) )
-                                    .collect( Collectors.toList() );
+                                  .map( config -> new ConfigParamModel( config.getId(), config.getName() ) )
+                                  .collect( Collectors.toList() );
     }
 
     public void saveUserLevel( String name )
